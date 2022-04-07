@@ -71,15 +71,22 @@ package com.vasquez.navegacion_fragmentacion
 // Crear Fragmentos en com.vasquez.navegacion_fragmentacion
     // com.vasquez.navegacion_fragmentacion + Click Derecho * New * Fragment + Fragment (Blank)
     // Fragment Name -> HomeFragment
+// -- Despues de importar el DataBinding en el SecodFragment, Crear un View Model, Carpeta Java, Click Derecho, Nuevo, Kotlin Class, le pondremos
+    // MainViewModel
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.NavHostFragment
 import com.vasquez.navegacion_fragmentacion.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
     // Creando binding: ActivityMainBinding
     private lateinit var binding: ActivityMainBinding
+
+    // Importanto ViewModel Creado, nos devuelve un paquete del viewModel
+    private val ViewModel : MainViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Creamos que el Data binding se enlace con el activity main
@@ -89,13 +96,7 @@ class MainActivity : AppCompatActivity() {
         val navHomeFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navHomeFragment.navController
 
-            // Con el binding se cambia, para pasar al otro fragmento
-        binding.actionChange.setOnClickListener {
-            // la acccion es la que se nombro con la flecha, que es de HomeFragment a SecondFragment
-           // navController.navigate(R.id.action_homeFragment_to_secondFragment)
-            // Se manda a llamar l segundo fragmento de golpe
-            navController.navigate(R.id.secondFragment)
-        }
+
 
     }
 }

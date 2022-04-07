@@ -18,5 +18,22 @@
         android:id="@+id/secondFragment"
         android:name="com.vasquez.navegacion_fragmentacion.SecondFragment"
         android:label="fragment_second"
-        tools:layout="@layout/fragment_second" />
+        tools:layout="@layout/fragment_second" >
+
+        <!--Se pueden gregar argumentos seleccionando el fragmento que quiere en este caso ya sea Home o Second, seguido se le da click
+            al que se quiera ir en este caso second Fragment de ahi en atributos aparese una propiedad que se llama Arguments le damos en
+             + y ahi podemos crear argumentos en este caso son los datos de abajo ya que sera de cadena de texto-->
+        <argument
+            android:name="name"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="World" />
+        <action
+            android:id="@+id/action_secondFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.vasquez.navegacion_fragmentacion.ResultFragment"
+        android:label="ResultFragment" />
 </navigation>

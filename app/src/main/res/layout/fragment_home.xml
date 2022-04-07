@@ -1,14 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<!-- Implementando DataBinding-->
+<!-- Creando un EditText y un Button -->
+<!-- Incluir la Data que usaremos, en el tipo, va la ruta del MainViewModel -->
+<!-- En EditText se inplemento el android Text, para mandar a llamar el ViewModel donde se mandara a llamar en name -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.vasquez.navegacion_fragmentacion.MainViewModel" />
+    </data>
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".HomeFragment">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:textSize="18dp"
+    android:text="Ingrese su Nombre Completo" />
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+<EditText
+    android:id="@+id/name_edit_text"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@={viewModel.name}"
+    android:hint="@string/hint_nombre" />
 
-</FrameLayout>
+
+    <Button
+        android:id="@+id/action_continu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/action_continue" />
+
+
+</LinearLayout>
+</layout>
