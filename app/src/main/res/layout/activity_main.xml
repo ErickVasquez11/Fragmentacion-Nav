@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Elemento para la navegacion Semiautomatica -->
+<!-- Activando DataBinding -->
+<!--1.0 Creando el <layout> y cerrandolo hasta el final </layout>, mover los esquemas los primero 3 hacia
+    layout son los que estaban en androidx.constraintlayout,widget.ConstrainLayout despues presionar
+    crtl + Alt + L, para formatear, y ahi tenemos DataBiding Activado
+      Dar Click en Build a la par de Run despues en Rebuild Project, para que efectue cambios-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <!-- Fragmentacion creada en el main, lo que hace la linea 15 es configurar un fragmento estatico, donde se ubicara
+               de la libreria, podremos configurar el host que esta adentro de ello.
+         * app:defaultNavHost="true", lo que hara que cuando apretemos el boton hacia atras del telefono quien se encarga
+               para nevegar es el NavHost
+         * app:navGraph="@navigation/nav_graph manda a llamar la navegacion que hicimos en el archivo RES
+               Configurar todo en cero el link con match Constraint parent a todos lados-->
+
+        <!--Hay que crear un id -->
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/nav_host_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:defaultNavHost="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/action_change"
+            app:navGraph="@navigation/nav_graph" />
+        <!-- Creamos un boton que ira arriba del fragmento ya creado, lo que haremos sera quitarle el parent de arriba al fragmento y cuando este el boton
+              lo uniremos con la parte abajo del boton y la parte de arriba de dicho boton-->
+        <Button
+            android:id="@+id/action_change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/action_cambiar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
