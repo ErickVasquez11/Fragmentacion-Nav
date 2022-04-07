@@ -11,21 +11,31 @@
             type="com.vasquez.navegacion_fragmentacion.MainViewModel" />
     </data>
     <LinearLayout
+        android:padding="@dimen/dafault_gap"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:context=".HomeFragment">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="18dp"
+            android:text="Ingrese su informacion Academica"/>
+
         <EditText
             android:id="@+id/lastname_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@={viewModel.lastName}"
-            android:hint="@string/hint_apellidos" />
+            android:text="@={viewModel.university}"
+            android:hint="@string/hint_university" />
 
         <Button
+
             android:id="@+id/action_continu"
             android:layout_width="wrap_content"
+            android:layout_gravity="end"
             android:layout_height="wrap_content"
             android:text="@string/action_continue" />
 

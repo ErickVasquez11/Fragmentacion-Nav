@@ -8,6 +8,7 @@
         type="com.vasquez.navegacion_fragmentacion.MainViewModel" />
 </data>
 <LinearLayout
+    android:padding="@dimen/dafault_gap"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -25,6 +26,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@{viewModel.lastName}" />
+
+    <TextView
+        android:id="@+id/university_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{viewModel.university}" />
 
 </LinearLayout>
 </layout>

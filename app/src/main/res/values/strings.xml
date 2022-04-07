@@ -8,4 +8,6 @@
     <string name="action_continue">Continuar</string>
     <string name="hint_apellidos">Apellidos</string>
     <string name="hint_edad">Edad</string>
+    <string name="hint_university">Universidad</string>
+
 </resources>

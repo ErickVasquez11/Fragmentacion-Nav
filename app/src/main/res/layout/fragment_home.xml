@@ -11,6 +11,7 @@
             type="com.vasquez.navegacion_fragmentacion.MainViewModel" />
     </data>
 <LinearLayout
+    android:padding="@dimen/dafault_gap"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -23,16 +24,26 @@
     android:text="Ingrese su Nombre Completo" />
 
 <EditText
+    android:padding="16dp"
     android:id="@+id/name_edit_text"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text="@={viewModel.name}"
     android:hint="@string/hint_nombre" />
 
+    <EditText
+        android:padding="16dp"
+        android:id="@+id/lastname_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@={viewModel.lastName}"
+        android:hint="@string/hint_apellidos" />
 
     <Button
+        android:layout_marginTop="@dimen/medium_gap"
         android:id="@+id/action_continu"
         android:layout_width="wrap_content"
+        android:layout_gravity="end"
         android:layout_height="wrap_content"
         android:text="@string/action_continue" />
 
