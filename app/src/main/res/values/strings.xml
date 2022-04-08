@@ -9,5 +9,6 @@
     <string name="hint_apellidos">Apellidos</string>
     <string name="hint_edad">Edad</string>
     <string name="hint_university">Universidad</string>
+    <string name="hint_carrer">Carrera</string>
 
 </resources>

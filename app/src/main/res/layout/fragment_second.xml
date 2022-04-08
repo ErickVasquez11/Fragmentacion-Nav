@@ -31,6 +31,12 @@
             android:text="@={viewModel.university}"
             android:hint="@string/hint_university" />
 
+        <EditText
+            android:id="@+id/carrer_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={viewModel.carrer}"
+            android:hint="@string/hint_carrer" />
         <Button
 
             android:id="@+id/action_continu"

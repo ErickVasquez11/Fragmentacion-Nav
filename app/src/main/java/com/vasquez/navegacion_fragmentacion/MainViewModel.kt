@@ -9,6 +9,11 @@ class MainViewModel: ViewModel(){
     var name = MutableLiveData("")
     var lastName = MutableLiveData("")
     var university = MutableLiveData("")
+    var gender = MutableLiveData("")
+    var birthday = MutableLiveData("")
+    var email = MutableLiveData("")
+    var phone = MutableLiveData("")
+    var carrer = MutableLiveData("")
 
 
 

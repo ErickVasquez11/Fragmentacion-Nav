@@ -27,14 +27,14 @@
         android:layout_height="wrap_content"
         android:layout_gravity="start"
         android:textSize="18dp"
-        android:text="Nombre:"/>
+        android:text="Nombres :"/>
 
     <TextView
         android:padding="@dimen/default_text"
         android:id="@+id/name_edit_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="12dp"
+        android:textSize="16dp"
         android:text="@{viewModel.name}" />
 
     <TextView
@@ -43,16 +43,17 @@
         android:layout_height="wrap_content"
         android:layout_gravity="start"
         android:textSize="18dp"
-        android:text="Apellido:"/>
+        android:text="Apellido :"/>
 
     <TextView
         android:padding="@dimen/default_text"
         android:id="@+id/lastname_edit_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="16dp"
         android:text="@{viewModel.lastName}" />
 
-    <TextView
+     <TextView
         android:padding="@dimen/dafault_gap"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -62,10 +63,76 @@
 
     <TextView
         android:padding="@dimen/default_text"
+        android:id="@+id/birthday_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:text="@{viewModel.university}" />
+
+    <TextView
+        android:padding="@dimen/dafault_gap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:textSize="18dp"
+        android:text="Carrera Universitaria :"/>
+
+    <TextView
+        android:padding="@dimen/default_text"
+        android:id="@+id/carrer_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:text="@{viewModel.carrer}" />
+
+    <TextView
+        android:padding="@dimen/dafault_gap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:textSize="18dp"
+        android:text="Fecha de Nacimiento:"/>
+
+    <TextView
+        android:padding="@dimen/default_text"
         android:id="@+id/university_edit_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@{viewModel.university}" />
+        android:textSize="16dp"
+        android:text="@{viewModel.birthday}" />
+
+    <TextView
+        android:padding="@dimen/dafault_gap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:textSize="18dp"
+        android:text="Correo Electronico :"/>
+
+    <TextView
+        android:padding="@dimen/default_text"
+        android:id="@+id/email_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:text="@{viewModel.email}" />
+
+    <TextView
+        android:padding="@dimen/dafault_gap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:textSize="18dp"
+        android:text="Numero de Telefono:"/>
+
+    <TextView
+        android:padding="@dimen/default_text"
+        android:id="@+id/phone_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:text="@{viewModel.phone}" />
+
 
 </LinearLayout>
 </layout>
